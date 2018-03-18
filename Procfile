@@ -1,1 +1,1 @@
-app: bundle exec ruby notifier.rb
+web: bundle exec ruby notifier.rb
