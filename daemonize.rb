@@ -1,0 +1,1 @@
+Process.daemon(true, true)
