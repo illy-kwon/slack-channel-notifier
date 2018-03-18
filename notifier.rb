@@ -1,5 +1,4 @@
 require 'slack-ruby-client'
-require './daemonize.rb'
 
 Slack.configure do |config|
   config.token = ENV['SLACK_API_TOKEN']
