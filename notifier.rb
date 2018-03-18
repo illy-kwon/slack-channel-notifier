@@ -24,15 +24,15 @@ end
 client.on :channel_created do |data|
   text = "A new channel <\##{data.channel.id}> was created by <@#{data.channel.creator}>."
   channel_id = 'C9SKF3M6K'  # #bot-test channel
-  puts text
   client.message(channel: channel_id, text: text, as_user: true)
 end
 
 client.on :emoji_changed do |data|
-  text = "A new emoji :#{data.name}: was added."
-  channel_id = 'C9SKF3M6K'  # #bot-test channel
-  puts text
-  client.message(channel: channel_id, text: text, as_user: true)
+  if data.subtype == "add"
+    text = "A new emoji :#{data.name}: was added."
+    channel_id = 'C9SKF3M6K'  # #bot-test channel
+    client.message(channel: channel_id, text: text, as_user: true)
+  end
 end
 
 client.start!
