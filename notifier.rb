@@ -13,7 +13,7 @@ end
 
 client.on :close do
   logger.error("close!")
-  clinet.stop!
+  client.stop!
 end
 
 client.on :closed do
