@@ -29,7 +29,7 @@ end
 client.on :emoji_changed do |data|
   puts data.subtype
   if data.subtype == "add"
-    text = "A new emoji :#{data.name}: was added."
+    text = "A new emoji `:#{data.name}:` :#{data.name}: was added."
     channel_id = 'C9RKP4ED9'  # #slack-notification channel
     client.message(channel: channel_id, text: text, as_user: true)
   end
